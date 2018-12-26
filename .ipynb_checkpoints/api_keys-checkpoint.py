@@ -1,0 +1,1 @@
+api_key_synopticlabs = 'KzezGQyxRYtjD2xjUwu2pcIlokS4Mm9NN99'
