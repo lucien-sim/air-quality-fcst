@@ -1,0 +1,38 @@
+root - INFO - **********************************************************
+root - INFO - Adding ozone observations to SQLite database.
+root - INFO - Time: 2019-07-17 16:51:04.135466
+root - INFO - Processing ozone observations from year: 2003
+root - INFO - Adding ozone observations to SQLite database, table: o3_obs_nyc
+root - INFO - Processing ozone observations from year: 2004
+root - INFO - Adding ozone observations to SQLite database, table: o3_obs_nyc
+root - INFO - Processing ozone observations from year: 2005
+root - INFO - Adding ozone observations to SQLite database, table: o3_obs_nyc
+root - INFO - Processing ozone observations from year: 2006
+root - INFO - Adding ozone observations to SQLite database, table: o3_obs_nyc
+root - INFO - Processing ozone observations from year: 2007
+root - INFO - Adding ozone observations to SQLite database, table: o3_obs_nyc
+root - INFO - Processing ozone observations from year: 2008
+root - INFO - Adding ozone observations to SQLite database, table: o3_obs_nyc
+root - INFO - Processing ozone observations from year: 2009
+root - INFO - Adding ozone observations to SQLite database, table: o3_obs_nyc
+root - INFO - Processing ozone observations from year: 2010
+root - INFO - Adding ozone observations to SQLite database, table: o3_obs_nyc
+root - INFO - Processing ozone observations from year: 2011
+root - INFO - Adding ozone observations to SQLite database, table: o3_obs_nyc
+root - INFO - Processing ozone observations from year: 2012
+root - INFO - Adding ozone observations to SQLite database, table: o3_obs_nyc
+root - INFO - Processing ozone observations from year: 2013
+root - INFO - Adding ozone observations to SQLite database, table: o3_obs_nyc
+root - INFO - Processing ozone observations from year: 2014
+root - INFO - Adding ozone observations to SQLite database, table: o3_obs_nyc
+root - INFO - Processing ozone observations from year: 2015
+root - INFO - Adding ozone observations to SQLite database, table: o3_obs_nyc
+root - INFO - Processing ozone observations from year: 2016
+root - INFO - Adding ozone observations to SQLite database, table: o3_obs_nyc
+root - INFO - Processing ozone observations from year: 2017
+root - INFO - Adding ozone observations to SQLite database, table: o3_obs_nyc
+root - INFO - Processing ozone observations from year: 2018
+root - INFO - Adding ozone observations to SQLite database, table: o3_obs_nyc
+root - INFO - Processing ozone observations from year: 2019
+root - INFO - Adding ozone observations to SQLite database, table: o3_obs_nyc
+root - INFO - Adding ozone observation site information to SQLite database, table: o3_sites_nyc

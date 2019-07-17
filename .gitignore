@@ -1,5 +1,11 @@
-/old_codes
+old_codes/
+old_data/
 api_keys.py
 project_documentation.docx
-/__pycache__
-/data
+__pycache__/
+data/
+.ipynb_checkpoints/
+logfiles/.ipynb_checkpoints/
+.vscode/
+scripts/__pycache__/
+.idea/

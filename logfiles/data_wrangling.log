@@ -1,0 +1,23 @@
+root - INFO - **********************************************************
+root - INFO - Populating SQLite database...
+root - INFO - Time: 2019-06-14 17:30:28.715746
+
+matplotlib.pyplot - DEBUG - Loaded backend module://ipykernel.pylab.backend_inline version unknown.
+root - INFO - Working on year: 2015. Time: 2019-06-14 17:31:33.868486
+root - INFO - Finished year: 2015. Time: 2019-06-14 18:04:49.872150
+root - INFO - Working on year: 2016. Time: 2019-06-14 18:04:50.050502
+root - INFO - Finished year: 2016. Time: 2019-06-14 18:37:55.005405
+root - INFO - Working on year: 2017. Time: 2019-06-14 18:37:55.005728
+root - INFO - Finished year: 2017. Time: 2019-06-14 19:11:51.127745
+root - INFO - Working on year: 2018. Time: 2019-06-14 19:11:51.127971
+root - INFO - Finished year: 2018. Time: 2019-06-14 19:45:17.145772
+root - INFO - Working on year: 2019. Time: 2019-06-14 19:45:19.099150
+root - INFO - Finished year: 2019. Time: 2019-06-14 19:49:18.044880
+root - INFO - **********************************************************
+root - INFO - Populating SQLite database...
+root - INFO - Time: 2019-06-15 12:45:16.672683
+
+root - ERROR - Invalid alias: The name clear can't be aliased because it is another magic command.
+root - ERROR - Invalid alias: The name more can't be aliased because it is another magic command.
+root - ERROR - Invalid alias: The name less can't be aliased because it is another magic command.
+root - ERROR - Invalid alias: The name man can't be aliased because it is another magic command.
