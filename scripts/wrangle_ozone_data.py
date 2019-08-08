@@ -64,7 +64,7 @@ def select_o3_observations_nyc(o3_df):
     sites_nyc = get_site_info_nyc(o3_df_nyc)
     test__check_o3_units(o3_df_nyc)
     o3_df_nyc_f = o3_df_nyc[['site_id', 'timestamp_local', 'Sample Measurement']]\
-        .rename(mapper={'Sample Measurement': 'o3'})\
+        .rename(mapper={'Sample Measurement': 'o3_ppm'}, axis=1)\
         .set_index('timestamp_local')
     return o3_df_nyc_f, sites_nyc
 
@@ -104,7 +104,7 @@ if __name__ == '__main__':
         logging.info(
             'Adding ozone observations to SQLite database, table: o3_obs_nyc')
         o3_df_nyc_f.to_sql('o3_obs_nyc', conn, index=True, if_exists='append')
-        
+
     logging.info(
         'Adding ozone observation site information to SQLite database, table: o3_sites_nyc')
     sites_nyc_all.to_sql('o3_sites_nyc', conn, index=True, if_exists='replace')

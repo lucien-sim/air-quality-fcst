@@ -1,0 +1,9 @@
+root - INFO - **********************************************************
+root - INFO - Downloading weather observations for KNYC, adding them to SQLite database.
+root - INFO - Time: 2019-07-17 18:25:33.092745
+root - INFO - Variables: ['air_temp', 'dew_point_temperature', 'wind_speed', 'wind_direction', 'wind_gust', 'precip_accum_one_hour', 'sea_level_pressure', 'solar_radiation', 'cloud_layer_1_code', 'cloud_layer_2_code', 'cloud_layer_3_code']
+root - INFO - Start time for data: 200301010000
+root - INFO - End time for data: 201907171600
+root - INFO - Fresh download? False
+root - INFO - Adding weather data to database, table: wx_obs
+root - INFO - Script completed: 2019-07-17 18:25:38.529224

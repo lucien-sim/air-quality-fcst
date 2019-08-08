@@ -10,6 +10,7 @@ from MesoPy import Meso
 import datetime
 from sql_functions import create_sql_connection, execute_sql_command
 import sys
+import logging
 
 sys.path.append('../')
 from api_keys import api_key_synopticlabs
@@ -108,7 +109,7 @@ def observations_to_df(wx_obs, vbl_list):
 
     # Convert to dataframe, resample to nearest hour. 
     obs_df = pd.DataFrame(obs_dict['station_obs'])
-    obs_df['date_time'] = pd.to_datetime(obs_df['date_time'], utc=True).dt.tz_convert('EST')
+    obs_df['date_time'] = pd.to_datetime(obs_df['date_time'])
     obs_df = obs_df.set_index('date_time')
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
@@ -117,7 +118,18 @@ def observations_to_df(wx_obs, vbl_list):
     return obs_df
 
 
-if __name__ == '__main__': 
+if __name__ == '__main__':
+
+    log_filename = '../logfiles/download_weather_data.log'
+    try: 
+        os.remove(log_filename)
+    except: 
+        pass
+    logging.basicConfig(filename=log_filename, filemode="w", level=logging.DEBUG,
+                        format='%(name)s - %(levelname)s - %(message)s')
+    logging.info('**********************************************************')
+    logging.info('Downloading weather observations for KNYC, adding them to SQLite database.')
+    logging.info('Time: '+str(datetime.datetime.today()))
 
     # Retrieve data from SynopticLabs API
     vbl_list = ['air_temp','dew_point_temperature',
@@ -126,16 +138,26 @@ if __name__ == '__main__':
                 'solar_radiation', 'cloud_layer_1_code',
                 'cloud_layer_2_code','cloud_layer_3_code']
     st_time = '200301010000'
-    ed_time = '201907171600'  
+    ed_time = '201907171600'
+    download_new = False
+
+    logging.info('Variables: '+str(vbl_list))
+    logging.info('Start time for data: '+st_time)
+    logging.info('End time for data: '+ed_time)
+    logging.info('Fresh download? '+str(download_new))
+
     # datetime.datetime.strftime(datetime.utcnow(), '%Y%m%d%H%M')
     wx_obs, fname = retrieve_wxobs_synopticlabs(api_key_synopticlabs, data_path, station_id='knyc',
                                                 st_time=st_time, ed_time=ed_time,
-                                                vbl_list=vbl_list, download_new=False)
+                                                vbl_list=vbl_list, download_new=download_new)
 
     # Place observations in dataframe
     obs_df = observations_to_df(wx_obs, vbl_list)
 
     # Add observations to a SQL database table. 
+    logging.info('Adding weather data to database, table: wx_obs')
     conn = create_sql_connection(db_file)
     obs_df.to_sql('wx_obs', conn, index=True, if_exists='replace')
     conn.close()
+
+    logging.info('Script completed: '+str(datetime.datetime.today()))

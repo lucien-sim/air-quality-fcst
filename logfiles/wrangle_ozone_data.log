@@ -36,3 +36,7 @@ root - INFO - Adding ozone observations to SQLite database, table: o3_obs_nyc
 root - INFO - Processing ozone observations from year: 2019
 root - INFO - Adding ozone observations to SQLite database, table: o3_obs_nyc
 root - INFO - Adding ozone observation site information to SQLite database, table: o3_sites_nyc
+root - ERROR - Invalid alias: The name clear can't be aliased because it is another magic command.
+root - ERROR - Invalid alias: The name more can't be aliased because it is another magic command.
+root - ERROR - Invalid alias: The name less can't be aliased because it is another magic command.
+root - ERROR - Invalid alias: The name man can't be aliased because it is another magic command.
